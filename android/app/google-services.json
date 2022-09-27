@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "976571806521",
+    "project_id": "blog-app-cfb98",
+    "storage_bucket": "blog-app-cfb98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976571806521:android:b1c4e2f0b907d9fa5beee8",
+        "android_client_info": {
+          "package_name": "com.example.blog_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976571806521-qpoqrfgspkfs4o9j43acnl6stu1ge2g3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.blog_app",
+            "certificate_hash": "ecf269115b72fbbdd65229ab8932813b801e733c"
+          }
+        },
+        {
+          "client_id": "976571806521-sarnbm6o8se5fk3kba8rd5r19fb4nvb8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.blog_app",
+            "certificate_hash": "12686627231e8fb6e95859bc39ae667acc48b0fb"
+          }
+        },
+        {
+          "client_id": "976571806521-u9ld6l0n86v32o8nmnp6ojqujkgd7pe1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqkmsby6EHHpTDV4FuVfCs-lpLxDaMcrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "976571806521-u9ld6l0n86v32o8nmnp6ojqujkgd7pe1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
