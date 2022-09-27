@@ -174,7 +174,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         UserModel user = UserModel().fromJson(data!);
 
                         return Text(
-                            'DATA\n${snapshot.data} ${snapshot.connectionState}\nUserName: ${user.username}\nEmail: ${user.email}');
+                            '\nUserName: ${user.username}\n\nEmail: ${user.email}');
                       }
                     },
                   ),

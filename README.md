@@ -1,17 +1,25 @@
 # blog_app
 
-A new Flutter project.
+Blog Application
 
-## Getting Started
+### Features
 
-This project is a starting point for a Flutter application.
+1.  Login with Email and Password ( nttest333@gmail.com, 123456 )
+2.  Login with Google
+3.  Create Blog with Image ( Real time feed )
+4.  User small profile section
 
-A few resources to get you started if this is your first Flutter project:
+### Task Done as follow
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [x] Solid state management (BLoC)
+- [x] Clean architecture.
+- [x] Project pattern (MVC/MVVM)
+- [x] Attach the readme file & App Screenshot in the readme file.
+- [x] Testable code.
+- [x] UI is not important but the flow of the app should be easy and smooth.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# blog_app
+### Attachments
+
+| Home Screen                                     | Create Blog Screen                              | Profile Screen                                 |
+| ----------------------------------------------- | ----------------------------------------------- | ---------------------------------------------- |
+| ![HOME SCREEN](./sample_images/home_screen.jpg) | ![CREATE BLOG](./sample_images/create_blog.jpg) | ![PROFILE](./sample_images/profile_screen.jpg) |
