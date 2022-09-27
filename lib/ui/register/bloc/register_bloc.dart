@@ -44,8 +44,8 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
             'lastLogin': DateTime.now().toString(),
           });
 
-          RegisterSuccess();
-          SharedPreferenceHelper.setToken((userCredential.user?.uid)!);
+          await SharedPreferenceHelper.setToken((userCredential.user?.uid)!);
+          yield RegisterSuccess();
         }
       } on FirebaseAuthException catch (e) {
         log.severe(

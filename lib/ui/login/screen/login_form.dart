@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:blog_app/core/constant/text_styles.dart';
 import 'package:blog_app/core/index.dart';
 import 'package:blog_app/core/util/snackbar.dart';
@@ -61,15 +59,6 @@ class _LoginFormState extends State<LoginForm> {
         _autoValidateMode = AutovalidateMode.always;
       });
     }
-  }
-
-  void _redirectToForgotPassword() {
-    _fieldFocusChange(context, _passwordFocus, FocusNode());
-    _formKey.currentState!.reset();
-    setState(() {
-      _autoValidateMode = AutovalidateMode.disabled;
-    });
-    // Navigator.pushNamed(context, ForgotPasswordPage.tag);
   }
 
   void _redirectToRegistrationPage() {
@@ -139,6 +128,34 @@ class _LoginFormState extends State<LoginForm> {
         final List<DocumentSnapshot> documents = result.docs;
 
         log.severe('===> DOC documents $documents');
+
+        if (documents.isEmpty) {
+          FirebaseFirestore.instance
+              .collection('users')
+              .doc(userCredential.user?.uid)
+              .set({
+            'username': firebaseUser.displayName,
+            "email": firebaseUser.email,
+            "password": firebaseUser.uid,
+            'photoUrl': '',
+            'id': userCredential.user?.uid,
+            'createdAt': DateTime.now().toString(),
+            'isOnline': true,
+            'lastLogin': DateTime.now().toString(),
+          });
+        } else {
+          FirebaseFirestore.instance
+              .collection('users')
+              .doc(userCredential.user?.uid)
+              .update({
+            'isOnline': true,
+            'lastLogin': DateTime.now().toString(),
+          });
+        }
+
+        SharedPreferenceHelper.setToken(firebaseUser.uid);
+
+        Navigator.pushNamed(context, HomePage.tag);
       }
     } catch (error) {
       log.shout(error, error);
